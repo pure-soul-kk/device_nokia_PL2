@@ -15,10 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_PL2.mk
+    $(LOCAL_DIR)/awaken_PL2.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_PL2-eng \
-    aosp_PL2-user \
-    aosp_PL2-userdebug
+    awaken_PL2-eng \
+    awaken_PL2-user \
+    awaken_PL2-userdebug
 

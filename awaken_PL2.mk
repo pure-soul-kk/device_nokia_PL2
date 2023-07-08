@@ -18,21 +18,24 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common PixelOS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common AwakenOS stuff
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
 #nherit from PL2 device
 $(call inherit-product, device/nokia/PL2/device.mk)
 
-# PixelOS Flags
-TARGET_USES_AOSP_RECOVERY := true
+# Boot Animation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Google Recorder
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_ENABLE_BLUR := true
-TARGET_CALL_RECORDING_SUPPORTED := true
-TARGET_GAPPS_ARCH := arm64
+
+# Google Assistant
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+# Official
+AWAKEN_BUILD_TYPE := unofficial
+
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -45,7 +48,7 @@ TARGET_OTA_ASSERT_DEVICE := PL2,PL2_sprout,Plate2
 TARGET_SCREEN_HEIGHT := 720
 TARGET_SCREEN_WIDTH := 1280
 
-PRODUCT_NAME := aosp_PL2
+PRODUCT_NAME := awaken_PL2
 PRODUCT_DEVICE := PL2
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia
