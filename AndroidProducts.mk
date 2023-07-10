@@ -15,10 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_PL2.mk
+    $(LOCAL_DIR)/pixys_PL2.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_PL2-eng \
-    aosp_PL2-user \
-    aosp_PL2-userdebug
+    pixys_PL2-eng \
+    pixys_PL2-user \
+    pixys_PL2-userdebug
 

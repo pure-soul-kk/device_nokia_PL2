@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Project Elixir stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 
 #nherit from PL2 device
 $(call inherit-product, device/nokia/PL2/device.mk)
@@ -36,7 +36,11 @@ TARGET_OTA_ASSERT_DEVICE := PL2,PL2_sprout,Plate2
 TARGET_SCREEN_HEIGHT := 720
 TARGET_SCREEN_WIDTH := 1280
 
-PRODUCT_NAME := aosp_PL2
+# PixysOS Flag
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+
+PRODUCT_NAME := pixys_PL2
 PRODUCT_DEVICE := PL2
 PRODUCT_MANUFACTURER := HMD Global
 PRODUCT_BRAND := Nokia
@@ -51,12 +55,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := Nokia/Plate2_00WW/PL2_sprout:10/QKQ1.190828.002/00WW_4_15O:user/release-keys
 
-# Add Elixir Flags
-ELIXIR_MAINTAINER := Krishna
-ELIXIR_BUILD_TYPE := OFFICIAL
-TARGET_INCLUDE_STOCK_ACORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_CALL_RECORDING := true
