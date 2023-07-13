@@ -35,6 +35,30 @@ TARGET_OTA_ASSERT_DEVICE := PL2,PL2_sprout,Plate2
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# RisingOSS Flags
+
+# Gapps
+WITH_GMS := true
+
+# Spoof build description/fingerprint as pixel device
+TARGET_USE_PIXEL_FINGERPRINT := true
+
+# Opt out of google dialer support, compiler will build aosp dialer,
+# package type will change from PIXEL -> GMS
+TARGET_OPTOUT_GOOGLE_TELEPHONY := false
+
+# Enable Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Enable Blur
+TARGET_ENABLE_BLUR := true
+
+# Official
+RISING_MAINTAINER := K R I S H N A
+
 PRODUCT_NAME := lineage_PL2
 PRODUCT_DEVICE := PL2
 PRODUCT_MANUFACTURER := HMD Global
